@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <ShoesCard/>
+      <section className='manShoes'>
+        <ShoesCard/>
+      </section>
     </>
   )
 }
