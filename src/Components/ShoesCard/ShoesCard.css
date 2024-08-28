@@ -99,7 +99,7 @@
 .card_title::-webkit-scrollbar{
     display: none;
   }
-  
+
 .card_bottom{
     display: flex;
     justify-content: space-between;
@@ -117,6 +117,17 @@
     z-index: -1;
 }  
   
+.size, .color{
+    padding: 0.5rem 0;
+}
+#size{
+    color: #001233;
+    background-color: #24F502;
+    border: #001233;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+}
 .btnProduct{
     border-radius: 0.5rem;
     background-color: #24F502;
