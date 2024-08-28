@@ -13,10 +13,19 @@
     height: 100%;
     object-fit: cover;
 }
-
 .productTitle .colorTitle{
-    color: #001233;
+    color: #24F502;
+    font-size: 2rem;
 }
+.btn-row, .productTitle{
+    padding: 1rem 0;
+}
+.btn{
+    background-color: #001233;
+    padding: 0.7rem 1.5rem;
+    border: none;
+}
+
 .products_row{
     display: flex;
     flex-direction: column;
@@ -32,12 +41,13 @@
     width:100%;
     max-width: 320px;
     /* height: 40rem; */
-    background-color: #001233;
+    background-color: #07193c;
     border-radius: 1rem;
     padding: 1rem;
     position: relative;
     z-index: -20;
     overflow: hidden;
+    box-shadow: 3px 3px 8px #000;
 }
 
 .shape-One{
@@ -66,6 +76,9 @@
     text-align: start;
     padding: 1rem;
 }
+.about-wrapper{
+    padding-top: 1rem;
+}
 .card_title{
     font-size: 2rem;
     line-height: 2.5rem;
@@ -78,7 +91,15 @@
 .card_about{
     font-size: 0.8rem;
     line-height: 1rem;
+    height: 4rem;
+    overflow: auto;
+    max-lines: 2;
 }
+.card_about::-webkit-scrollbar,
+.card_title::-webkit-scrollbar{
+    display: none;
+  }
+  
 .card_bottom{
     display: flex;
     justify-content: space-between;
@@ -96,6 +117,13 @@
     z-index: -1;
 }  
   
+.btnProduct{
+    border-radius: 0.5rem;
+    background-color: #24F502;
+    color: #001233;
+    font-size: 1rem;
+    font-weight: bold;
+}
   @media (min-width: 767px) {
     .products_row{
         flex-direction: row;

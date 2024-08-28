@@ -27,7 +27,12 @@ const ShoesCard = () => {
     <div className="container">
       <div className="products">
         <div className="productTitle">
-          <h1 className="colorTitle">Branded Shirts</h1>
+          <h1 className="colorTitle">Branded Shoes</h1>
+        </div>
+        <div className="btn-row">
+          <button className="btn btnAll">All</button>
+          <button className="btn btnImp">Imported</button>
+          <button className="btn btnLocal">Local</button>
         </div>
         <div className="products_row">
           {data.map((item) => (
@@ -49,10 +54,7 @@ const ShoesCard = () => {
                   <br />
                   <div className="about-wrapper">
                     <strong className="card_title">{item.title}</strong>
-                    <span className="card_about">
-                      A shoe is an item to protect and
-                      comfort the human foot.
-                    </span>
+                    <p className="card_about">{item.description}</p>
                   </div>
                   <div className="size">
                     <strong>Size:</strong>
@@ -65,7 +67,7 @@ const ShoesCard = () => {
                       <div className="card_price">
                         <strong>$ {item.price}</strong>
                       </div>
-                      <div className="card_rating"></div>
+                      <div className="card_rating">{item.rate}</div>
                     </div>
                     <div className="cart">
                       <button className="cart_btn">
@@ -81,6 +83,9 @@ const ShoesCard = () => {
             </div>
           </div>
           ))}
+        </div>
+        <div className="btn-row">
+          <button className="btn btnProduct">Add Product</button>
         </div>
       </div>
     </div>
