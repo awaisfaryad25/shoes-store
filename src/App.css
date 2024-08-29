@@ -13,4 +13,13 @@ body{
 .manShoes{
   padding-top: 2rem;
   padding-bottom: 2rem;
+  position: relative;
+}
+.modal{
+  position: absolute;
+  bottom: 0.5%;
+  left: 39%;
+  background-color: #001233;
+  border-radius: 1rem;
+  z-index: 1000;
 }

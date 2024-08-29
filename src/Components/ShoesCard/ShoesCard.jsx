@@ -3,8 +3,9 @@ import "./ShoesCard.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const ShoesCard = () => {
+const ShoesCard = ({ openModal }) => {
 
+  // ---------------------  Get API ------------------
   const [data, setData] = useState([]);
   const getShoes = async () => {
     try {
@@ -19,15 +20,14 @@ const ShoesCard = () => {
   useEffect(() => {
     getShoes();
   }, []);
-
+// -------------------------------------------
 
   const [topping, setTopping] = useState("red");
-
   const onOptionChange = (event) => {
     setTopping(event.target.value)
   };
 
-  const [sModal, setModalOpen] = useState('');
+  // ------------------------  Open Modal
 
   
 
@@ -131,7 +131,7 @@ const ShoesCard = () => {
           ))}
         </div>
         <div className="btn-row">
-          <button className="btn btnProduct">Add Product</button>
+          <button className="btn btnProduct" onClick={openModal}>Add Product</button>
         </div>
       </div>
     </div>
