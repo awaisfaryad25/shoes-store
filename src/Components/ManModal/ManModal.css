@@ -1,0 +1,60 @@
+
+
+.manModal{
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1rem;
+  max-width: 320px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 8px #000;
+  border: 1px solid #24F502;
+}
+.close{
+  display: flex;
+  justify-content: end;
+}
+.btn-close{
+  background-color: red;
+  padding: 3px;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+}
+.close-icn{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.inputGroup, .submit{
+  padding: 0.3rem 0;
+}
+
+.fromLabel{
+  display: block;
+  text-align: start;
+  
+}
+.formInput{
+  padding: 0.5rem;
+  box-sizing: border-box;
+  color: #001233;
+  /* background-color: #24F502; */
+  border: 1px solid #24F502;
+  border-radius: 0.3rem;
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+}
+
+.btn-Sub{
+  background-color: #24F502;
+  color: #001233;
+  width: 100%;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.btn-canc{
+  font-size: 1.2rem;
+  width: 100%;
+  border-radius: 0.3rem;
+}

@@ -8,7 +8,7 @@ const ShoesCard = () => {
   const [data, setData] = useState([]);
   const getShoes = async () => {
     try {
-      const response = await axios.get("https://fakestoreapi.com/products/");
+      const response = await axios.get("https://fakestoreapi.com/products");
       console.log("Data", response.data);
       setData(response.data);
     } catch (err) {
@@ -26,6 +26,10 @@ const ShoesCard = () => {
   const onOptionChange = (event) => {
     setTopping(event.target.value)
   };
+
+  const [sModal, setModalOpen] = useState('');
+
+  
 
   return (
     <div className="container">

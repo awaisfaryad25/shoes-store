@@ -38,6 +38,7 @@
 }
 
 .card{
+    box-sizing: border-box;
     width:100%;
     max-width: 320px;
     /* height: 40rem; */
