@@ -18,8 +18,13 @@ body{
 .modal{
   position: absolute;
   bottom: 0.5%;
-  left: 39%;
+  left: 5%;
   background-color: #001233;
   border-radius: 1rem;
   z-index: 1000;
+}
+@media (min-width: 767px) {
+  .modal{
+    left: 39%;
+  }
 }

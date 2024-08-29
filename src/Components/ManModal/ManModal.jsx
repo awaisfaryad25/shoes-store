@@ -1,11 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ManModal.css";
 
 const ManModal = ({ isOpen, closeModal }) => {
   if(!isOpen) return null;
   return (
-    <div className="manModal">
+    <div  className="manModal">
       <div className="container">
         <div className="close">
           <button className=" btn-close" onClick={closeModal}>
