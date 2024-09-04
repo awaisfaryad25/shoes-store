@@ -33,6 +33,22 @@ const ShoesCard = ({ openModal }) => {
   // Handle page change
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    // Calculate total pages
+    const totalPages = Math.ceil(data.length / productsPerPage);
+    // Handle Previous button
+    const handlePrevious = () => {
+      if (currentPage > 1) {
+        setCurrentPage(currentPage - 1);
+      }
+    };
+  
+    // Handle Next button
+    const handleNext = () => {
+      if (currentPage < totalPages) {
+        setCurrentPage(currentPage + 1);
+      }
+    };
+
   // ----------------------------- Pagination End -----------
 
 
@@ -175,14 +191,31 @@ const ShoesCard = ({ openModal }) => {
         </div>
         {/* Pagination */}
         <div className="pagination">
+
+          <button
+            onClick={handlePrevious}
+            className="pagination-btn"
+            disabled={currentPage === 1} // Disable Previous button on the first page
+          >
+            <img src="./previous.svg" alt="" />
+          </button>
+
           {Array.from({length: Math.ceil(data.length / productsPerPage) }, (_, i) => (
             <button 
             key={i} onClick={()=>paginate(i + 1)}
-            className={`pagination-btn ${currentPage === i + 1 ? "active" : ""}`}
+            className={`pagination-btn btn-num ${currentPage === i + 1 ? "active" : ""}`}
             >
               {i + 1}
             </button>
           ))}
+
+          <button
+            onClick={handleNext}
+            className="pagination-btn"
+            disabled={currentPage === totalPages} // Disable Next button on the last page
+          >
+            <img src="./next.svg" alt="" />
+          </button>
         </div>
         
       </div>

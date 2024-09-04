@@ -243,6 +243,13 @@
   border-color: #010820;
   border-radius: 100%;
 }
+.btn-num{
+  padding: 5px 18px;
+}
+.pagination-btn img{
+  width: 25px;
+  height: 30px;
+}
 @media (min-width: 767px) {
   .products_row {
     flex-direction: row;
