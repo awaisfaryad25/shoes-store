@@ -1,12 +1,10 @@
 import { useState } from "react";
-
 import "./App.css";
 import ShoesCard from "./Components/ShoesCard/ShoesCard";
 import ManModal from "./Components/ManModal/ManModal";
 
 function App() {
   const [count, setCount] = useState(0);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Function to open the modal

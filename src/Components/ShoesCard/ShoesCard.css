@@ -46,30 +46,38 @@
     border-radius: 1rem;
     padding: 1rem;
     position: relative;
-    z-index: -20;
     overflow: hidden;
     box-shadow: 3px 3px 8px #000;
+}
+.cardUpper{
+    position: relative;
+    height: 17rem;
 }
 
 .shape-One{
     position: absolute;
     top: 5%;
     left: 0;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .dotShape{
     position: absolute;
     top: 15%;
     right: 10%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .shoes{
     width: 250px;
     height: 250px;
     margin: auto;  
+    border-radius: 100%;
+    z-index: 111;
+    position: absolute;
+    left: 5%;
 }
 .shoes img{
     border-radius: 100%;
+    z-index: 100;
 }
 
 /* Down */
@@ -115,20 +123,34 @@
     position: absolute;
     right: 0;
     bottom: -1.2%;
-    z-index: -1;
 }  
   
-.size, .color{
+.sizeSelector, .color{
     padding: 0.5rem 0;
 }
-#size{
+#sizeSelector{
     color: #001233;
     background-color: #24F502;
     border: #001233;
+    outline: none;
     padding: 0.2rem 0.5rem;
     border-radius: 0.2rem;
     font-weight: 600;
 }
+.size{
+/*  */
+}
+#sizeSelector option{
+    color: #001233;
+}
+.size,.color{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: -20;
+
+}
+
 .btnProduct{
     border-radius: 0.5rem;
     background-color: #24F502;
@@ -136,6 +158,35 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.rating {
+    display: inline-block;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+    font-size: 30px;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #6f00ff;
+    transition: color 0.3s;
+  }
+  
   @media (min-width: 767px) {
     .products_row{
         flex-direction: row;

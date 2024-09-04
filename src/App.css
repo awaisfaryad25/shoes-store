@@ -23,6 +23,23 @@ body{
   border-radius: 1rem;
   z-index: 1000;
 }
+
+
+/* Adjust the dropdown menu background or text color */
+.dropdown-menu {
+  background-color: white; /* Set to white for better contrast */
+}
+
+.dropdown-item {
+  color: black; /* Ensure contrast against the background */
+}
+
+/* Ensure dropdown menu appears above other content */
+.dropdown-menu {
+  z-index: 1050; /* Set higher than .modal if needed */
+}
+
+
 @media (min-width: 767px) {
   .modal{
     left: 39%;
