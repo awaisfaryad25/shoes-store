@@ -71,37 +71,46 @@ const ShoesCard = ({ openModal }) => {
                     <div className="color">
                       <strong>Color:</strong>
                       <form action="">
-                        <input
+                        <input 
+                        className="variant_input"
                           type="radio"
-                          name="topping"
                           value="red"
                           id="red"
                         />
-                        <label htmlFor="red"></label>
+                        <label htmlFor="red" className="variant_label red"></label>
 
                         <input
+                        className="variant_input"
                           type="radio"
-                          name="topping"
-                          value="white"
-                          id="white"
-                        />
-                        <label htmlFor="white"></label>
-
-                        <input
-                          type="radio"
-                          name="topping"
-                          value="black"
-                          id="black"
-                        />
-                        <label htmlFor="black"></label>
-
-                        <input
-                          type="radio"
-                          name="topping"
                           value="blue"
                           id="blue"
                         />
-                        <label htmlFor="blue"></label>
+                        <label htmlFor="blue" className="variant_label blue"></label>
+
+                        <input
+                        className="variant_input"
+                          type="radio"
+                          value="white"
+                          id="white"
+                        />
+                        <label htmlFor="white" className="variant_label white"></label>
+
+                        <input
+                        className="variant_input"
+                          type="radio"
+                          value="yellow"
+                          id="yellow"
+                        />
+                        <label htmlFor="yellow" className="variant_label yellow"></label>
+
+                        <input
+                        className="variant_input"
+                          type="radio"
+                          value="black"
+                          id="black"
+                        />
+                        <label htmlFor="black" className="variant_label black"></label>
+
                       </form>
                     </div>
                     <div className="card_bottom">
