@@ -22,6 +22,20 @@ const ShoesCard = ({ openModal }) => {
   }, []);
   // ---------------------------- End ----------------------
 
+  // ---------------------------- Pagination ---------------
+  const [currentPage, setCurrentPage] = useState(1); // Current page
+  const productsPerPage = 6; // Number of products per page
+  // Calculate the indices for the products to display
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
+  
+  // Handle page change
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  // ----------------------------- Pagination End -----------
+
+
 
   return (
     <div className="container">
@@ -35,7 +49,7 @@ const ShoesCard = ({ openModal }) => {
           <button className="btn btnLocal">Local</button>
         </div>
         <div className="products_row">
-          {data.map((item) => (
+          {currentProducts.map((item) => (
             <div className="products_col" key={item.id}>
               <div className="card">
                 <div className="cardUpper">
@@ -159,6 +173,18 @@ const ShoesCard = ({ openModal }) => {
             Add Product
           </button>
         </div>
+        {/* Pagination */}
+        <div className="pagination">
+          {Array.from({length: Math.ceil(data.length / productsPerPage) }, (_, i) => (
+            <button 
+            key={i} onClick={()=>paginate(i + 1)}
+            className={`pagination-btn ${currentPage === i + 1 ? "active" : ""}`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+        
       </div>
 
       

@@ -19,6 +19,7 @@ body{
 .modal{
   position: absolute;
   bottom: 0.5%;
+  /* height: 100vh; */
   left: 5%;
   background-color: #001233;
   border-radius: 1rem;
